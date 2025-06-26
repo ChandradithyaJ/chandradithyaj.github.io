@@ -7,10 +7,10 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © 2024 Dr. Research. All rights reserved.
+            Chandradithya S Jonnalagadda
           </div>
           <div className="text-sm text-muted-foreground">
-            Built with React & Tailwind CSS
+            Please hire me 🥺
           </div>
         </div>
       </div>

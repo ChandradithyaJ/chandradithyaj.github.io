@@ -1,64 +1,154 @@
-
 import React from 'react';
-import { ArrowRight, BookOpen, Microscope, PenTool } from 'lucide-react';
+import { ArrowRight, BookOpen, Microscope, PenTool, Github, GraduationCap, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Link } from 'react-router-dom';
 
 export const Home: React.FC = () => {
+  const newsItems = [
+    {
+      date: "June 2025",
+      content: "I've given a talk titled \"Introduction to Artificial Intelligence and Data Science\" to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
+    },
+    // {
+    //   date: "Sep 2024",
+    //   content: (
+    //     <>
+    //       I have joined <a href="#" className="text-blue-600 hover:underline">Algorithmic Robotics & Control Lab</a> as a Ph.D. student in Computer Science.
+    //     </>
+    //   )
+    // },
+    // {
+    //   date: "June 2024",
+    //   content: "DAP has been accepted to IROS 2024."
+    // },
+    // {
+    //   date: "June 2024",
+    //   content: (
+    //     <>
+    //       <a href="#" className="text-blue-600 hover:underline">LGMCTS</a> has been accepted to IROS 2024.
+    //     </>
+    //   )
+    // },
+    // {
+    //   date: "Aug 2023",
+    //   content: (
+    //     <>
+    //       <a href="#" className="text-blue-600 hover:underline">OVSG</a> has been accepted to CoRL 2023.
+    //     </>
+    //   )
+    // },
+    // {
+    //   date: "Jan 2023",
+    //   content: (
+    //     <>
+    //       I have joined <a href="#" className="text-blue-600 hover:underline">Rutgers Robot Learning Lab</a> as a graduate student researcher.
+    //     </>
+    //   )
+    // }
+  ];
+
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
+    <div className="space-y-12">
       <section className="py-16">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Left side - Name, Bio, Buttons */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                Dr. Research Scholar
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Advancing knowledge through innovative research in computational science and data analytics
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" asChild>
-                <Link to="/research">
-                  View Research <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">
-                  Get in Touch
-                </Link>
-              </Button>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 max-w-xl">
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+                  Chandradithya Jonnalagadda
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground">
+                  Incoming Masters in CS @ Brown University | B.Tech CS Grad @ IIT Tirupati | Reinforcement Learning, Multi-Agent Systems, Optimization, Deep Learning, LLMs
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" asChild>
+                  <Link to="/research">
+                    View Research & Projects <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/contact">
+                    Get in Touch
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button variant="secondary" size="lg" asChild>
+                  <Link to="/cv">
+                    View CV
+                  </Link>
+                </Button>
+                <Button variant="secondary" size="lg" asChild>
+                  <Link to="/resume">
+                    View Resume
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://github.com/ChandradithyaJ" target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" />
+                    GitHub
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://scholar.google.com/citations?user=your-id" target="_blank" rel="noopener noreferrer">
+                    <GraduationCap className="mr-2 h-4 w-4" />
+                    Scholar
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <a href="https://linkedin.com/in/chandradithyaj" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="mr-2 h-4 w-4" />
+                    LinkedIn
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="secondary" size="lg" asChild>
-                <Link to="/cv">
-                  View CV
-                </Link>
-              </Button>
-              <Button variant="secondary" size="lg" asChild>
-                <Link to="/resume">
-                  View Resume
-                </Link>
-              </Button>
+            {/* Right side - Profile Photo */}
+            <div className="flex justify-center md:justify-end">
+              <Avatar className="h-56 w-56 md:h-72 md:w-72 lg:h-80 lg:w-80 border-4 border-primary/20 shadow-2xl">
+                <AvatarImage
+                  src="src/images/profilePic.jpg"
+                  alt="Chandradithya Jonnalagadda"
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-4xl font-bold">Chandra Jonnalagadda</AvatarFallback>
+              </Avatar>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Right side - Profile Photo */}
-          <div className="flex justify-center md:justify-end">
-            <Avatar className="h-64 w-64 md:h-80 md:w-80 border-4 border-primary/20">
-              <AvatarImage 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face" 
-                alt="Dr. Research Scholar"
-              />
-              <AvatarFallback className="text-4xl font-bold">DR</AvatarFallback>
-            </Avatar>
+      {/* Logos Section */}
+      <section className="py-6 border-y border-border/40">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
+            {/* Add logos here - they will automatically resize to fit */}
+            <img
+              src="src/images/Brown-University-Logo.jpg"
+              alt="Brown University"
+              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            />
+            <img
+              src="src/images/rbcdsai.jpeg"
+              alt="Robert Bosch Center for DS and AI"
+              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            />
+            <img
+              src="src/images/Sigma-Squad-Logo.jpg"
+              alt="Sigma Squad"
+              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            />
+            <img
+              src="src/images/Indian-Institute-of-Technology-Tirupati-Logo-1.png"
+              alt="IIT Tirupati"
+              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            />
           </div>
         </div>
       </section>
@@ -67,30 +157,31 @@ export const Home: React.FC = () => {
       <section className="space-y-8">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">About Me</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <p className="text-lg text-muted-foreground w-full px-4">
+            I’m a Computer Science graduate from IIT Tirupati and an incoming Master’s student at Brown University. My research interests lie in Reinforcement Learning, Multi-Agent Systems, Optimization, and LLMs — with a focus on building robust, scalable, and trustworthy AI for real-world impact.
+            
+            My Bachelor’s thesis was in Risk-Sensitive RL (under review at NeurIPS 2025). I’ve worked on Explainable AI, Graph Neural Networks, LLM reasoning with tool augmentation, adversarially trained drone models, and practical deep learning applications in healthcare and software engineering.
+            
+            I enjoy fast-paced prototyping and have experience with PyTorch, TensorFlow, PyG, HuggingFace, LangChain, and more. At IIT Tirupati, I led the AI/ML club Sigma Squad, mentoring projects in RL, Deep Learning for CV, and AI agents.
+            
+            Outside of research, I love quizzing, video editing, cricket, and learning new languages -- right now it's French & Spanish!
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+
+        <div className="grid md:grid-cols-1 gap-8 items-center">
           <div className="space-y-4">
-            <h3 className="text-2xl font-semibold">Background</h3>
-            <p className="text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
-              Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-            </p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• PhD in Computer Science, University of Excellence</li>
-              <li>• MS in Data Science, Institute of Technology</li>
-              <li>• BS in Mathematics, State University</li>
-            </ul>
-          </div>
-          <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg p-8 h-64 flex items-center justify-center">
-            <div className="text-center">
-              <Microscope className="h-16 w-16 mx-auto mb-4 text-primary" />
-              <p className="text-sm text-muted-foreground">Research Focus Areas</p>
+            <h3 className="text-2xl font-semibold">News</h3>
+            <div className="space-y-4 max-h-80 overflow-y-auto pr-2">
+              {newsItems.map((item, index) => (
+                <div key={index} className="flex gap-4 text-sm">
+                  <div className="font-medium text-white-700 whitespace-nowrap min-w-fit">
+                    {item.date}:
+                  </div>
+                  <div className="text-muted-foreground">
+                    {item.content}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -104,10 +195,10 @@ export const Home: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Microscope className="h-5 w-5 text-primary" />
-                Research Projects
+                Projects
               </CardTitle>
               <CardDescription>
-                Discover my latest research initiatives and ongoing projects in computational science.
+                Discover my latest research initiatives and ongoing projects!
               </CardDescription>
             </CardHeader>
             <CardContent>
