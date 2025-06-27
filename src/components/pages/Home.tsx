@@ -11,14 +11,14 @@ export const Home: React.FC = () => {
       date: "June 2025",
       content: "I've given a talk titled \"Introduction to Artificial Intelligence and Data Science\" to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
     },
-    // {
-    //   date: "Sep 2024",
-    //   content: (
-    //     <>
-    //       I have joined <a href="#" className="text-blue-600 hover:underline">Algorithmic Robotics & Control Lab</a> as a Ph.D. student in Computer Science.
-    //     </>
-    //   )
-    // },
+    {
+      date: "May 2025",
+      content: (
+        <>
+          Submitted my Bachelor's Thesis on Risk-Sensitive RL and Stochastic Approximation to NeurIPS 2025!
+        </>
+      )
+    },
     // {
     //   date: "June 2024",
     //   content: "DAP has been accepted to IROS 2024."
@@ -158,13 +158,13 @@ export const Home: React.FC = () => {
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">About Me</h2>
           <p className="text-lg text-muted-foreground w-full px-4">
-            I’m a Computer Science graduate from IIT Tirupati and an incoming Master’s student at Brown University. My research interests lie in Reinforcement Learning, Multi-Agent Systems, Optimization, and LLMs — with a focus on building robust, scalable, and trustworthy AI for real-world impact.
+            I’m a Computer Science graduate from IIT Tirupati and an incoming Master’s student at Brown University. My interests lie in Reinforcement Learning, Multi-Agent Systems, Optimization, and LLMs — with a focus on building robust, scalable, and trustworthy AI for real-world impact.
             
             My Bachelor’s thesis was in Risk-Sensitive RL (under review at NeurIPS 2025). I’ve worked on Explainable AI, Graph Neural Networks, LLM reasoning with tool augmentation, adversarially trained drone models, and practical deep learning applications in healthcare and software engineering.
             
             I enjoy fast-paced prototyping and have experience with PyTorch, TensorFlow, PyG, HuggingFace, LangChain, and more. At IIT Tirupati, I led the AI/ML club Sigma Squad, mentoring projects in RL, Deep Learning for CV, and AI agents.
             
-            Outside of research, I love quizzing, video editing, cricket, and learning new languages -- right now it's French & Spanish!
+            Outside of my professional interests, I love quizzing, video editing, cricket, and learning new languages -- right now it's French & Spanish!
           </p>
         </div>
 
@@ -198,7 +198,7 @@ export const Home: React.FC = () => {
                 Projects
               </CardTitle>
               <CardDescription>
-                Discover my latest research initiatives and ongoing projects!
+                Discover my latest research initiatives, publications and ongoing projects!
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -217,7 +217,7 @@ export const Home: React.FC = () => {
                 Blog Posts
               </CardTitle>
               <CardDescription>
-                Read my thoughts on current trends in research, technology, and academic life.
+                Read my thoughts on current trends in research, technology, and more!
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -233,10 +233,10 @@ export const Home: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-primary" />
-                Publications
+                Snippets of my Life
               </CardTitle>
               <CardDescription>
-                Access my published papers, conference presentations, and academic contributions.
+                Check out some fun and interesting stuff I've done over the years!
               </CardDescription>
             </CardHeader>
             <CardContent>
