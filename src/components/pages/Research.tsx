@@ -1,6 +1,7 @@
 import React from 'react';
-import { ExternalLink, Calendar, Users, Award, Github, Globe, FileText } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
+import { Calendar, Users, Award, Github, Globe, FileText } from 'lucide-react';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -8,16 +9,14 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const researchProjects = [
   {
     id: 1,
-    title: "Risk-Sensitive Reinforcement Learning with Stochastic Approximation (not paper title; currently under review at NeurIPS 2025)",
+    title: "Risk-Sensitive Reinforcement Learning with Stochastic Approximation (not paper title; currently under review at NeurIPS 2025) (Bachelor's Thesis)",
     description: "Reinforcement learning can be made risk-aware by replacing the standard average-reward objective with an exponential-utility criterion that explicitly rewards or penalises variability. For this setting, we derive a non-linear Bellman operator, establish its contraction and uniqueness properties, and develop risk-sensitive policy-iteration grounded in these guarantees. We then develop two fully on-policy risk-sensitive actor-critic algorithms under linear function approximation, with theoretical finite-time convergence guarantees.",
     status: "Completed",
     year: "August 2024 - May 2025",
     collaborators: ["Namboori Nandhavardhan Chowdhary", "Dr. Ajin George Joseph"],
     tags: ["Reinforcement Learning", "Stochastic Approximation", "Risk-Sensitive Control"],
-    // funding: "NSF Grant #1234567",
     image: "src/images/beyondexp.png",
     github: "https://github.com/ChandradithyaJ/Risk-Sensitive-RL",
-    // demo: "https://climate-predictor.demo.com",
     // paper: "https://arxiv.org/abs/2024.climate.ml"
   },
   {
@@ -31,6 +30,7 @@ const researchProjects = [
     funding: "Robert Bosch Center for Data Science and Artificial Intelligence",
     image: "src/images/ExplanationGenerationMethodology.png",
     github: "https://github.com/umbreeze/LegalGraph",
+    demo: "/research/demos/hiergraphs",
     // paper: "https://arxiv.org/abs/2023.quantum.opt"
   }
 ];
@@ -38,31 +38,29 @@ const researchProjects = [
 const otherProjects = [
   {
     id: 3,
-    title: "Academic Collaboration Platform",
-    description: "Full-stack web application for researchers to collaborate on projects, share resources, and manage publications. Built with React, Node.js, and PostgreSQL with real-time collaboration features.",
+    title: "Lightweight Drone Foundation Model for Environment Understanding through Drone Cameras",
+    description: "Designed and developed an adversarially trained lightweight Drone Foundation Model to encode drone camera images.",
     status: "Completed",
-    year: "2024",
-    collaborators: ["Dev Team Alpha"],
-    tags: ["React", "Node.js", "PostgreSQL", "WebSocket"],
-    funding: "Self-funded",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop",
-    github: "https://github.com/projects/academic-collab",
-    demo: "https://academic-collab.com",
-    paper: "https://docs.academic-collab.com/whitepaper"
+    year: "April 2025 - May 2025",
+    collaborators: ["Ikshitha Janarthanan", "Aniket Johri", "Shankesh Ambaliya"],
+    tags: ["Foundation Models", "Adversarial Deep Learning", "Object Detection", "Semantic Segmentation"],
+    image: "src/images/DFM.png",
+    github: "https://github.com/Error-404-NotFound/CS518L-Deep-Learning-Project",
+    paper: "https://drive.google.com/file/d/1wE8Ezeod71sN0EN4G1tQEJrVB6heG0Gz/view?usp=sharing"
   },
   {
     id: 4,
-    title: "Research Data Visualization Dashboard",
-    description: "Interactive dashboard for visualizing complex research datasets. Features dynamic charts, real-time data updates, and collaborative annotation tools for research teams.",
-    status: "Ongoing",
-    year: "2024",
-    collaborators: ["UX Designer", "Data Scientist"],
-    tags: ["D3.js", "React", "Python", "FastAPI"],
-    funding: "University Grant",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-    github: "https://github.com/projects/data-viz",
-    demo: "https://research-viz.demo.com",
-    paper: "https://research-viz.demo.com/methodology"
+    title: "Agentic RAG Pipeline for Privacy Policy Legal Assistance Using Multi-Agent Collaboration and Evidence Graphs [Inter IIT Tech Meet 13.0 High Prep Problem Statement - Sponsored by Pathway]",
+    description: "This project presents a novel Agentic Retrieval-Augmented Generation (RAG) architecture designed to provide legal assistance on privacy policies of online services. Leveraging a modular multi-agent framework, the system decomposes user queries into subtasks, retrieves evidence from both curated databases and the web, and constructs structured evidence graphs to enhance response relevance and accuracy. The pipeline incorporates Chain-of-Thought prompting, sentiment-filtered web retrieval, graph-based context aggregation, and Responsible AI guardrails.",
+    status: "Completed",
+    year: "November 2024 - December 2024",
+    collaborators: ["Niranjan M", "Aniket Johri", "Adithya Ananth", "Sayan Kundu", "Karthikeya Maruvada", "Umakant Sahu", "Deepak Yadav"],
+    tags: ["Agentic AI", "Retrieval-Augmented Generation", "Multi-Agent Collaboration", "Large Language Models", "Web Search Augmentation", "Vector Databases", "Responsible AI", "Reinforcement Learning", "LlaMaIndex", "Pathway APIs"],
+    funding: "Pathway",
+    image: "src/images/pathway.png",
+    github: "https://github.com/Sigma-Squad/Pathway-InterIIT-13.0",
+    // demo: "https://research-viz.demo.com",
+    paper: "https://drive.google.com/file/d/18Sv8mbk-sqd_uzTOMhvoigH0jMWbzEtS/view?usp=sharing"
   }
 ];
 
@@ -75,7 +73,7 @@ const ProjectCard = ({ project }: { project: any }) => (
           <img
             src={project.image}
             alt={project.title}
-            className="rounded-lg object-cover w-full h-full"
+            className="rounded-lg object-contain w-full h-full"
             loading="lazy"
           />
         </AspectRatio>
@@ -133,10 +131,17 @@ const ProjectCard = ({ project }: { project: any }) => (
           )}
           {project.demo && (
             <Button variant="outline" size="sm" asChild>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                <Globe className="h-4 w-4 mr-1" />
-                Demo
-              </a>
+              {project.demo.startsWith('http') ? (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                  <Globe className="h-4 w-4 mr-1" />
+                  Demo
+                </a>
+              ) : (
+                <Link to={project.demo}>
+                  <Globe className="h-4 w-4 mr-1" />
+                  Demo
+                </Link>
+              )}
             </Button>
           )}
           {project.paper && (

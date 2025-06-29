@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Layout } from "@/components/Layout";
 import { Home } from "@/components/pages/Home";
 import { Research } from "@/components/pages/Research";
+import { HierGraphs } from "@/components/pages/demos/HierGraphs";
 import { Blog } from "@/components/pages/Blog";
 import { Contact } from "@/components/pages/Contact";
 import { CV } from "@/components/pages/CV";
@@ -26,6 +27,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/research" element={<Research />} />
+              <Route path="/research/demos/hiergraphs" element={<HierGraphs />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cv" element={<CV />} />
