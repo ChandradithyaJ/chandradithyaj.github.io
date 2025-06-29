@@ -51,7 +51,7 @@ export const Home: React.FC = () => {
 
   return (
     <div className="space-y-12">
-      <section className="py-16">
+      <section className="py-6">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6 max-w-xl">
@@ -60,7 +60,7 @@ export const Home: React.FC = () => {
                   Chandradithya Jonnalagadda
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground">
-                  Incoming Masters in CS @ Brown University | B.Tech CS Grad @ IIT Tirupati | Reinforcement Learning, Multi-Agent Systems, Optimization, Deep Learning, LLMs
+                  Incoming Masters in CS @ Brown University <br /> B.Tech CS Grad @ IIT Tirupati <br /> Reinforcement Learning, Multi-Agent Systems, Optimization, Deep Learning, LLMs
                 </p>
               </div>
 
@@ -88,6 +88,8 @@ export const Home: React.FC = () => {
                     View Resume
                   </Link>
                 </Button>
+              </ div >
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="outline" size="lg" asChild>
                   <a href="https://github.com/ChandradithyaJ" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" />
@@ -111,11 +113,11 @@ export const Home: React.FC = () => {
 
             {/* Right side - Profile Photo */}
             <div className="flex justify-center md:justify-end">
-              <Avatar className="h-56 w-56 md:h-72 md:w-72 lg:h-80 lg:w-80 border-4 border-primary/20 shadow-2xl">
+              <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/20 shadow-2xl">
                 <AvatarImage
                   src="src/images/profilePic.jpg"
                   alt="Chandradithya Jonnalagadda"
-                  className="object-cover"
+                  className="object-cover object-bottom"
                 />
                 <AvatarFallback className="text-4xl font-bold">Chandra Jonnalagadda</AvatarFallback>
               </Avatar>
@@ -125,29 +127,29 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Logos Section */}
-      <section className="py-6 border-y border-border/40">
+      <section className="py-4 border-y border-border/40">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8 lg:gap-10">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
             {/* Add logos here - they will automatically resize to fit */}
             <img
               src="src/images/Brown-University-Logo.jpg"
               alt="Brown University"
-              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
               src="src/images/rbcdsai.jpeg"
               alt="Robert Bosch Center for DS and AI"
-              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
               src="src/images/Sigma-Squad-Logo.jpg"
               alt="Sigma Squad"
-              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
               src="src/images/Indian-Institute-of-Technology-Tirupati-Logo-1.png"
               alt="IIT Tirupati"
-              className="h-12 md:h-16 lg:h-20 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
           </div>
         </div>

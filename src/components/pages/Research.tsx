@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Users, Award, Github, Globe, FileText } from 'lucide-react';
+import { Calendar, Users, Award, Github, Globe, FileText, Link as LinkIcon } from 'lucide-react';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ const researchProjects = [
     status: "Ongoing",
     year: "May 2024 - July 2025",
     collaborators: ["Ambreesh Parthasarathy", "Bhaarath Karthikeyan", "Shubham Kashyapi", "Krithi Shailya", "Dr. Gokul S Krishnan", "Prof. Balaraman Ravindran"],
-    tags: ["Graph Neural Networks", "Explainable AI for Graphs", "Large Language Models"],
+    tags: ["Graph Neural Networks", "Explainable AI for Graphs", "Large Language Models", "PyTorch", "PyTorch Geometric"],
     funding: "Robert Bosch Center for Data Science and Artificial Intelligence",
     image: "src/images/ExplanationGenerationMethodology.png",
     github: "https://github.com/umbreeze/LegalGraph",
@@ -61,6 +61,81 @@ const otherProjects = [
     github: "https://github.com/Sigma-Squad/Pathway-InterIIT-13.0",
     // demo: "https://research-viz.demo.com",
     paper: "https://drive.google.com/file/d/18Sv8mbk-sqd_uzTOMhvoigH0jMWbzEtS/view?usp=sharing"
+  },
+  {
+    id: 5,
+    title: "MiFeMoDEP - A Hybrid Mixed Feature Model for Cross Project Defect Prediction",
+    description: "MiFeMoDEP is a hybrid mixed-feature model for cross-project defect prediction in Python programs, combining semantic embeddings from CodeBERT and flow representations from Code Property Graphs processed via a Relational GCN. The unified features are used for file-level classification, followed by LIME-based line ranking to identify buggy lines, achieving competitive performance against state-of-the-art models.",
+    status: "Completed",
+    year: "February 2024 - April 2024",
+    collaborators: ["A Shree Balaji", "KE Nanda Kishore", "Karthikeya Maruvada", "Chetan Moturi"],
+    tags: ["Cross-Project Defect Prediction", "CodeBERT", "Code Property Graph", "Graph Neural Network", "Relational GCN", "Line-Level Defect Prediction", "JOERN", "LIME"],
+    funding: "Department of Computer Science and Engineering, IIT Tirupati",
+    image: "src/images/MiFeMoDEP.png",
+    github: "https://github.com/ChandradithyaJ/MiFeMoDEP",
+    paper: "https://drive.google.com/file/d/1c1tyaBhTfhombSTcUyhWJxqbwlodFQYG/view?usp=sharing"
+  },
+  {
+    id: 6,
+    title: "Tool-Augmented LLM Pipeline with Dual-Head Architecture and Recursive Prompt Optimization [Inter IIT Tech Meet 12.0 High Prep Problem Statement - Sponsored by DevRev]",
+    description: "This work proposes a modular pipeline to augment Large Language Models with external tools via tool prediction and argument extraction using dual LLM heads. Leveraging GPT-3.5 and GPT-4, fine-tuned through QLoRA where needed, and recursive prompt optimization, the system supports dynamic tool addition with strong performance and cost-efficiency trade-offs.",
+    status: "Completed",
+    year: "November 2023 - December 2023",
+    collaborators: ["Ishaan Kulkarni", "Karthikeya Maruvada", "Sayan Kundu", "Aniket Johri", "Nilanjan Samaddar", "Deep Ganguly", "Adithya Ananth"],
+    tags: ["LLM Tool Augmentation", "QLoRA", "Recursive Prompt Optimization", "Prompt Engineering"],
+    funding: "DevRev",
+    image: "src/images/devrev.png",
+    github: "https://github.com/Sigma-Squad/DevRev-InterIIT-TechMeet-12.0",
+    paper: "https://drive.google.com/file/d/1DO6hH3qkMhhhZsPE_A7fbg3PiQIzdMo5/view?usp=sharing"
+  },
+  {
+    id: 7,
+    title: "Sankalp",
+    description: "Web app aiming to sensitize people to, and destigmatize, mental health issues, differently abled, and similar issues.",
+    status: "Completed",
+    year: "September 2023 - November 2023",
+    collaborators: ["Karthikeya Maruvada", "Arpit Gupta", "Manurbhav Arya", "Namboori Nandhavardhan Chowdhary"],
+    tags: ["React.js SPA", "Node.js", "Express.js (MVC)", "MongoDB & Mongoose", "JWT Authentication", "Cloudinary API", "Live News API", "Story Mode UX", "Sentiment Analysis", "Seamless Dark-Light Mode Switch", "Multilingual Support", "Vercel & Render Deployment", "Lottie Animations"],
+    image: "src/images/Sankalp_logo.png",
+    website: "https://sankalp-one.vercel.app",
+    github: "https://github.com/ChandradithyaJ/Sankalp",
+    demo: "https://www.youtube.com/watch?v=ZZddluzInkI"
+  },
+  {
+    id: 8,
+    title: "Anvadhi",
+    description: "An app to help promote and protect endangered cultural arts and provide employment to their artists.",
+    status: "Completed",
+    year: "August 2023",
+    collaborators: ["Karthikeya Maruvada", "Arpit Gupta", "Manurbhav Arya", "Namboori Nandhavardhan Chowdhary"],
+    tags: ["Dart", "Flutter", "Firebase Auth", "Firestore", "Geocoding API", "Interactive Maps", "Media Upload", "Bookmarks & Favorites"],
+    image: "src/images/anvadhi_image.jpg",
+    github: "https://github.com/ChandradithyaJ/Anvadhi",
+    apk: "https://drive.google.com/file/d/1mrecq0xepETjotA2RJvA73sdOCWGI8z5/view?usp=sharing",
+    demo: "https://drive.google.com/file/d/1lTh1kWTyCGdwrj5AHYJNEIlHb4H3iQl0/view?usp=sharing"
+  },
+  {
+    id: 9,
+    title: "Regex-to-NFA",
+    description: "Input any regular expression and an NFA for it will be generated.",
+    status: "Completed",
+    year: "April 2023 - June 2023",
+    collaborators: ["KE Nanda Kishore"],
+    tags: ["Dijkstra's Algorithm", "NetworkX", "matplotlib", "McNaughton-Yamada-Thompson Algorithm", "Python", "C++"],
+    image: "src/images/regex2nfa.png",
+    github: "https://github.com/ChandradithyaJ/Regex-to-NFA",
+    demo: "https://drive.google.com/file/d/1ItMvhjQ2L3p-r2acy1gsdiJxg_TArrNn/view?usp=sharing"
+  },
+  {
+    id: 10,
+    title: "InterpretingRust",
+    description: "A Python interpreter to interpret a subset of the Rust programming language.",
+    status: "Completed",
+    year: "October 2022 - November 2022",
+    collaborators: ["Namboori Nandhavardhan Chowdhary", "Karthikeya Maruvada"],
+    tags: ["Parser", "Interpreter", "Abstract Syntax Tree", "Lexer", "Tokenizer"],
+    image: "src/images/interpretingRust.png",
+    github: "https://github.com/ChandradithyaJ/InterpretingRust",
   }
 ];
 
@@ -127,6 +202,36 @@ const ProjectCard = ({ project }: { project: any }) => (
                 <Github className="h-4 w-4 mr-1" />
                 Code
               </a>
+            </Button>
+          )}
+          {project.website && (
+            <Button variant="outline" size="sm" asChild>
+              {project.website.startsWith('http') ? (
+                <a href={project.website} target="_blank" rel="noopener noreferrer">
+                  <LinkIcon className="h-4 w-4 mr-1" />
+                  Website
+                </a>
+              ) : (
+                <Link to={project.website}>
+                  <LinkIcon className="h-4 w-4 mr-1" />
+                  Website
+                </Link>
+              )}
+            </Button>
+          )}
+          {project.apk && (
+            <Button variant="outline" size="sm" asChild>
+              {project.apk.startsWith('http') ? (
+                <a href={project.apk} target="_blank" rel="noopener noreferrer">
+                  <LinkIcon className="h-4 w-4 mr-1" />
+                  APK
+                </a>
+              ) : (
+                <Link to={project.apk}>
+                  <LinkIcon className="h-4 w-4 mr-1" />
+                  APK
+                </Link>
+              )}
             </Button>
           )}
           {project.demo && (
