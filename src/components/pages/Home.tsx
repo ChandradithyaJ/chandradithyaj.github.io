@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
   const newsItems = [
     {
       date: "June 2025",
-      content: "I've given a talk titled \"Introduction to Artificial Intelligence and Data Science\" to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
+      content: "I gave a virtual talk titled \"Introduction to Artificial Intelligence and Data Science\" to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
     },
     {
       date: "May 2025",
