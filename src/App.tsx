@@ -7,8 +7,9 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import { Layout } from "@/components/Layout";
 import { Home } from "@/components/pages/Home";
 import { Research } from "@/components/pages/Research";
-import { HierGraphs } from "@/components/pages/demos/HierGraphs";
+import { HierGraphs } from "@/components/pages/helpers/HierGraphs";
 import { Blog } from "@/components/pages/Blog";
+import { MarkdownViewer } from "./components/pages/helpers/MarkdownViewer";
 import { Contact } from "@/components/pages/Contact";
 import { CV } from "@/components/pages/CV";
 import { Resume } from "@/components/pages/Resume";
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/research" element={<Research />} />
               <Route path="/research/demos/hiergraphs" element={<HierGraphs />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:filename" element={<MarkdownViewer />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/cv" element={<CV />} />
               <Route path="/resume" element={<Resume />} />
