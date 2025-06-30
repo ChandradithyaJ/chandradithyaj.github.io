@@ -11,8 +11,6 @@ import { HierGraphs } from "@/components/pages/helpers/HierGraphs";
 import { Blog } from "@/components/pages/Blog";
 import { MarkdownViewer } from "./components/pages/helpers/MarkdownViewer";
 import { Contact } from "@/components/pages/Contact";
-import { CV } from "@/components/pages/CV";
-import { Resume } from "@/components/pages/Resume";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,8 +30,6 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:filename" element={<MarkdownViewer />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/cv" element={<CV />} />
-              <Route path="/resume" element={<Resume />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>

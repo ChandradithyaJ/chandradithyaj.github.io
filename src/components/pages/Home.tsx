@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Microscope, PenTool, Github, GraduationCap, Linkedin } from 'lucide-react';
+import { ArrowRight, BookOpen, Microscope, PenTool, Github, GraduationCap, Linkedin, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -21,32 +21,12 @@ export const Home: React.FC = () => {
     },
     // {
     //   date: "June 2024",
-    //   content: "DAP has been accepted to IROS 2024."
-    // },
-    // {
-    //   date: "June 2024",
     //   content: (
     //     <>
     //       <a href="#" className="text-blue-600 hover:underline">LGMCTS</a> has been accepted to IROS 2024.
     //     </>
     //   )
     // },
-    // {
-    //   date: "Aug 2023",
-    //   content: (
-    //     <>
-    //       <a href="#" className="text-blue-600 hover:underline">OVSG</a> has been accepted to CoRL 2023.
-    //     </>
-    //   )
-    // },
-    // {
-    //   date: "Jan 2023",
-    //   content: (
-    //     <>
-    //       I have joined <a href="#" className="text-blue-600 hover:underline">Rutgers Robot Learning Lab</a> as a graduate student researcher.
-    //     </>
-    //   )
-    // }
   ];
 
   return (
@@ -79,16 +59,19 @@ export const Home: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="secondary" size="lg" asChild>
-                  <Link to="/cv">
-                    View CV
-                  </Link>
+                  <a href="/src/assets/ChandraJonnalagaddaCV.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className="mr-2 h-4 w-4" />
+                    CV
+                  </a>
                 </Button>
+
                 <Button variant="secondary" size="lg" asChild>
-                  <Link to="/resume">
-                    View Resume
-                  </Link>
+                  <a href="/src/assets/ChandraJonnalagaddaResume.pdf" target="_blank" rel="noopener noreferrer">
+                    <FileText className="mr-2 h-4 w-4" />
+                    Resume
+                  </a>
                 </Button>
-              </ div >
+              </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button variant="outline" size="lg" asChild>
                   <a href="https://github.com/ChandradithyaJ" target="_blank" rel="noopener noreferrer">
