@@ -152,8 +152,7 @@ export const Blog: React.FC = () => {
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-bold">Blog</h1>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Thoughts, insights, and discussions on research, technology, and academic life. 
-          Join me as I explore ideas and share experiences from the world of tech!
+          Thoughts, insights, and discussions on research, technology, and academic life!
         </p>
       </section>
 
@@ -208,7 +207,7 @@ export const Blog: React.FC = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="mt-16">
+      {/* <section className="mt-16">
         <Card className="bg-gradient-to-r from-primary/10 to-primary/5">
           <CardContent className="pt-6">
             <div className="text-center space-y-4">
@@ -223,7 +222,7 @@ export const Blog: React.FC = () => {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </section> */}
     </div>
   );
 };

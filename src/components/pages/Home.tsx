@@ -9,7 +9,11 @@ export const Home: React.FC = () => {
   const newsItems = [
     {
       date: "June 2025",
-      content: "I gave a virtual talk titled \"Introduction to Artificial Intelligence and Data Science\" to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
+      content: (
+        <>
+          I gave a <a href="https://www.linkedin.com/posts/chandradithyaj_ai-datascience-educationforall-activity-7347889900970569728-uLQp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_TzygB6Ht0Cz0hOtLnD9uu0r6kXf0OHDU" className="text-blue-600 hover:underline" target='_blank'>virtual talk titled "Introduction to Artificial Intelligence and Data Science"</a> to freshmen and sophomores from various colleges in my home state Andhra Pradesh (India)."
+        </>
+      )
     },
     {
       date: "May 2025",
@@ -19,14 +23,6 @@ export const Home: React.FC = () => {
         </>
       )
     },
-    // {
-    //   date: "June 2024",
-    //   content: (
-    //     <>
-    //       <a href="#" className="text-blue-600 hover:underline">LGMCTS</a> has been accepted to IROS 2024.
-    //     </>
-    //   )
-    // },
   ];
 
   return (
@@ -58,12 +54,12 @@ export const Home: React.FC = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button variant="secondary" size="lg" asChild>
+                {/* <Button variant="secondary" size="lg" asChild>
                   <a href="/src/assets/ChandraJonnalagaddaCV.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="mr-2 h-4 w-4" />
                     CV
                   </a>
-                </Button>
+                </Button> */}
 
                 <Button variant="secondary" size="lg" asChild>
                   <a href="/src/assets/ChandraJonnalagaddaResume.pdf" target="_blank" rel="noopener noreferrer">
@@ -142,8 +138,8 @@ export const Home: React.FC = () => {
       <section className="space-y-8">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold">About Me</h2>
-          <p className="text-lg text-muted-foreground w-full px-4">
-            I’m a Computer Science graduate from IIT Tirupati and an incoming Master’s student at Brown University. My interests lie in Reinforcement Learning, Multi-Agent Systems, Optimization, and LLMs — with a focus on building robust, scalable, and trustworthy AI for real-world impact.
+          <p className="text-lg text-muted-foreground w-full px-4 text-justify">
+            I hold a Bachelor's degree in Computer Science and Engineering from the Indian Institute of Technology (IIT), Tirupati and I'm an incoming Master's in Computer Science student at Brown University. My interests lie in Reinforcement Learning, Multi-Agent Systems, Optimization, and LLMs — with a focus on building robust, scalable, and trustworthy AI for real-world impact.
             
             My Bachelor’s thesis was in Risk-Sensitive RL (under review at NeurIPS 2025). I’ve worked on Explainable AI, Graph Neural Networks, LLM reasoning with tool augmentation, adversarially trained drone models, and practical deep learning applications in healthcare and software engineering.
             
@@ -175,7 +171,7 @@ export const Home: React.FC = () => {
       {/* Quick Links */}
       <section className="space-y-8">
         <h2 className="text-3xl font-bold text-center">Explore My Work</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -209,25 +205,6 @@ export const Home: React.FC = () => {
               <Button variant="outline" className="w-full" asChild>
                 <Link to="/blog">
                   Read Blog <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-primary" />
-                Snippets of my Life
-              </CardTitle>
-              <CardDescription>
-                Check out some fun and interesting stuff I've done over the years!
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button variant="outline" className="w-full" asChild>
-                <Link to="/research">
-                  View Publications <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </CardContent>
