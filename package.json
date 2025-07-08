@@ -1,12 +1,12 @@
 {
-  "name": "chandradithya_personal_website",
+  "name": "crib",
   "private": true,
   "version": "0.0.0",
   "homepage": "https://chandradithyaj.github.io",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
