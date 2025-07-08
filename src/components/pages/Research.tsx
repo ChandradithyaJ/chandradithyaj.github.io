@@ -15,7 +15,7 @@ const researchProjects = [
     year: "August 2024 - May 2025",
     collaborators: ["Namboori Nandhavardhan Chowdhary", "Dr. Ajin George Joseph"],
     tags: ["Reinforcement Learning", "Stochastic Approximation", "Risk-Sensitive Control"],
-    image: "src/images/beyondexp.png",
+    image: "public/images/beyondexp.png",
     github: "https://github.com/ChandradithyaJ/Risk-Sensitive-RL",
     // paper: "https://arxiv.org/abs/2024.climate.ml"
   },
@@ -28,7 +28,7 @@ const researchProjects = [
     collaborators: ["Ambreesh Parthasarathy", "Bhaarath Karthikeyan", "Shubham Kashyapi", "Krithi Shailya", "Dr. Gokul S Krishnan", "Prof. Balaraman Ravindran"],
     tags: ["Graph Neural Networks", "Explainable AI for Graphs", "Large Language Models", "PyTorch", "PyTorch Geometric"],
     funding: "Robert Bosch Center for Data Science and Artificial Intelligence",
-    image: "src/images/ExplanationGenerationMethodology.png",
+    image: "public/images/ExplanationGenerationMethodology.png",
     github: "https://github.com/umbreeze/LegalGraph",
     demo: "/research/demos/hiergraphs",
     // paper: "https://arxiv.org/abs/2023.quantum.opt"
@@ -44,7 +44,7 @@ const otherProjects = [
     year: "April 2025 - May 2025",
     collaborators: ["Ikshitha Janarthanan", "Aniket Johri", "Shankesh Ambaliya"],
     tags: ["Foundation Models", "Adversarial Deep Learning", "Object Detection", "Semantic Segmentation"],
-    image: "src/images/DFM.png",
+    image: "public/images/DFM.png",
     github: "https://github.com/Error-404-NotFound/CS518L-Deep-Learning-Project",
     paper: "https://drive.google.com/file/d/1wE8Ezeod71sN0EN4G1tQEJrVB6heG0Gz/view?usp=sharing"
   },
@@ -57,7 +57,7 @@ const otherProjects = [
     collaborators: ["Niranjan M", "Aniket Johri", "Adithya Ananth", "Sayan Kundu", "Karthikeya Maruvada", "Umakant Sahu", "Deepak Yadav"],
     tags: ["Agentic AI", "Retrieval-Augmented Generation", "Multi-Agent Collaboration", "Large Language Models", "Web Search Augmentation", "Vector Databases", "Responsible AI", "Reinforcement Learning", "LlaMaIndex", "Pathway APIs"],
     funding: "Pathway",
-    image: "src/images/pathway.png",
+    image: "public/images/pathway.png",
     github: "https://github.com/Sigma-Squad/Pathway-InterIIT-13.0",
     // demo: "https://research-viz.demo.com",
     paper: "https://drive.google.com/file/d/18Sv8mbk-sqd_uzTOMhvoigH0jMWbzEtS/view?usp=sharing"
@@ -71,7 +71,7 @@ const otherProjects = [
     collaborators: ["A Shree Balaji", "KE Nanda Kishore", "Karthikeya Maruvada", "Chetan Moturi"],
     tags: ["Cross-Project Defect Prediction", "CodeBERT", "Code Property Graph", "Graph Neural Network", "Relational GCN", "Line-Level Defect Prediction", "JOERN", "LIME"],
     funding: "Department of Computer Science and Engineering, IIT Tirupati",
-    image: "src/images/MiFeMoDEP.png",
+    image: "public/images/MiFeMoDEP.png",
     github: "https://github.com/ChandradithyaJ/MiFeMoDEP",
     paper: "https://drive.google.com/file/d/1c1tyaBhTfhombSTcUyhWJxqbwlodFQYG/view?usp=sharing"
   },
@@ -84,7 +84,7 @@ const otherProjects = [
     collaborators: ["Ishaan Kulkarni", "Karthikeya Maruvada", "Sayan Kundu", "Aniket Johri", "Nilanjan Samaddar", "Deep Ganguly", "Adithya Ananth"],
     tags: ["LLM Tool Augmentation", "QLoRA", "Recursive Prompt Optimization", "Prompt Engineering"],
     funding: "DevRev",
-    image: "src/images/devrev.png",
+    image: "public/images/devrev.png",
     github: "https://github.com/Sigma-Squad/DevRev-InterIIT-TechMeet-12.0",
     paper: "https://drive.google.com/file/d/1DO6hH3qkMhhhZsPE_A7fbg3PiQIzdMo5/view?usp=sharing"
   },
@@ -96,7 +96,7 @@ const otherProjects = [
     year: "September 2023 - November 2023",
     collaborators: ["Karthikeya Maruvada", "Arpit Gupta", "Manurbhav Arya", "Namboori Nandhavardhan Chowdhary"],
     tags: ["React.js SPA", "Node.js", "Express.js (MVC)", "MongoDB & Mongoose", "JWT Authentication", "Cloudinary API", "Live News API", "Story Mode UX", "Sentiment Analysis", "Seamless Dark-Light Mode Switch", "Multilingual Support", "Vercel & Render Deployment", "Lottie Animations"],
-    image: "src/images/Sankalp_logo.png",
+    image: "public/images/Sankalp_logo.png",
     website: "https://sankalp-one.vercel.app",
     github: "https://github.com/ChandradithyaJ/Sankalp",
     demo: "https://www.youtube.com/watch?v=ZZddluzInkI"
@@ -109,7 +109,7 @@ const otherProjects = [
     year: "August 2023",
     collaborators: ["Karthikeya Maruvada", "Arpit Gupta", "Manurbhav Arya", "Namboori Nandhavardhan Chowdhary"],
     tags: ["Dart", "Flutter", "Firebase Auth", "Firestore", "Geocoding API", "Interactive Maps", "Media Upload", "Bookmarks & Favorites"],
-    image: "src/images/anvadhi_image.jpg",
+    image: "public/images/anvadhi_image.jpg",
     github: "https://github.com/ChandradithyaJ/Anvadhi",
     apk: "https://drive.google.com/file/d/1mrecq0xepETjotA2RJvA73sdOCWGI8z5/view?usp=sharing",
     demo: "https://drive.google.com/file/d/1lTh1kWTyCGdwrj5AHYJNEIlHb4H3iQl0/view?usp=sharing"
@@ -122,7 +122,7 @@ const otherProjects = [
     year: "April 2023 - June 2023",
     collaborators: ["KE Nanda Kishore"],
     tags: ["Dijkstra's Algorithm", "NetworkX", "matplotlib", "McNaughton-Yamada-Thompson Algorithm", "Python", "C++"],
-    image: "src/images/regex2nfa.png",
+    image: "public/images/regex2nfa.png",
     github: "https://github.com/ChandradithyaJ/Regex-to-NFA",
     demo: "https://drive.google.com/file/d/1ItMvhjQ2L3p-r2acy1gsdiJxg_TArrNn/view?usp=sharing"
   },
@@ -134,7 +134,7 @@ const otherProjects = [
     year: "October 2022 - November 2022",
     collaborators: ["Namboori Nandhavardhan Chowdhary", "Karthikeya Maruvada"],
     tags: ["Parser", "Interpreter", "Abstract Syntax Tree", "Lexer", "Tokenizer"],
-    image: "src/images/interpretingRust.png",
+    image: "public/images/interpretingRust.png",
     github: "https://github.com/ChandradithyaJ/InterpretingRust",
   }
 ];

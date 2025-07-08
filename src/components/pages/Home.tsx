@@ -55,14 +55,14 @@ export const Home: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-3">
                 {/* <Button variant="secondary" size="lg" asChild>
-                  <a href="/src/assets/ChandraJonnalagaddaCV.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/public/assets/ChandraJonnalagaddaCV.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="mr-2 h-4 w-4" />
                     CV
                   </a>
                 </Button> */}
 
                 <Button variant="secondary" size="lg" asChild>
-                  <a href="/src/assets/ChandraJonnalagaddaResume.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/public/assets/ChandraJonnalagaddaResume.pdf" target="_blank" rel="noopener noreferrer">
                     <FileText className="mr-2 h-4 w-4" />
                     Resume
                   </a>
@@ -94,7 +94,7 @@ export const Home: React.FC = () => {
             <div className="flex justify-center md:justify-end">
               <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/20 shadow-2xl">
                 <AvatarImage
-                  src="src/images/profilePic.jpg"
+                  src="/public/images/profilePic.jpg"
                   alt="Chandradithya Jonnalagadda"
                   className="object-cover object-bottom"
                 />
@@ -111,22 +111,22 @@ export const Home: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
             {/* Add logos here - they will automatically resize to fit */}
             <img
-              src="src/images/Brown-University-Logo.jpg"
+              src="public/images/Brown-University-Logo.jpg"
               alt="Brown University"
               className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
-              src="src/images/rbcdsai.jpeg"
+              src="public/images/rbcdsai.jpeg"
               alt="Robert Bosch Center for DS and AI"
               className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
-              src="src/images/Sigma-Squad-Logo.jpg"
+              src="public/images/Sigma-Squad-Logo.jpg"
               alt="Sigma Squad"
               className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
             <img
-              src="src/images/Indian-Institute-of-Technology-Tirupati-Logo-1.png"
+              src="public/images/Indian-Institute-of-Technology-Tirupati-Logo-1.png"
               alt="IIT Tirupati"
               className="h-16 md:h-20 lg:h-24 w-auto max-w-32 md:max-w-40 lg:max-w-48 object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             />
