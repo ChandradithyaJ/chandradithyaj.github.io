@@ -94,7 +94,7 @@ export const Home: React.FC = () => {
             <div className="flex justify-center md:justify-end">
               <Avatar className="h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 border-4 border-primary/20 shadow-2xl">
                 <AvatarImage
-                  src="//images/profilePic.jpg"
+                  src="/images/profilePic.jpg"
                   alt="Chandradithya Jonnalagadda"
                   className="object-cover object-bottom"
                 />
@@ -166,7 +166,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>  
 
       {/* Quick Links */}
       <section className="space-y-8">
