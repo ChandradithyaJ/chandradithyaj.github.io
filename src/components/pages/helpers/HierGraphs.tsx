@@ -32,7 +32,7 @@ export const HierGraphs: React.FC = () => {
     return (
         <div className="w-full h-screen">
             <iframe
-                src="/src/assets/gnnexp261.html"
+                src="/assets/gnnexp261.html"
                 className="w-full h-full border-0"
                 title="HierGraphs Demo"
                 onLoad={() => setLoading(false)}

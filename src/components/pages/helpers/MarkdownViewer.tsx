@@ -12,7 +12,7 @@ export const MarkdownViewer: React.FC = () => {
 
     const { filename } = useParams<{ filename: string }>();
     console.log(`filename: ${filename}`)
-    const filepath = `/public/assets/blogs/${filename}.md`;
+    const filepath = `/assets/blogs/${filename}.md`;
 
     useEffect(() => {
         const loadMarkdownFile = async () => {
