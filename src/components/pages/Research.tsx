@@ -28,7 +28,7 @@ const researchProjects = [
     collaborators: ["Ambreesh Parthasarathy", "Bhaarath Karthikeyan", "Shubham Kashyapi", "Krithi Shailya", "Dr. Gokul S Krishnan", "Prof. Balaraman Ravindran"],
     tags: ["Graph Neural Networks", "Explainable AI for Graphs", "Large Language Models", "PyTorch", "PyTorch Geometric"],
     funding: "Robert Bosch Center for Data Science and Artificial Intelligence",
-    image: "/images/ExplanationGenerationMethodology.png",
+    image: "/images/secret.jpg",
     github: "https://github.com/umbreeze/LegalGraph",
     demo: "/research/demos/hiergraphs",
     // paper: "https://arxiv.org/abs/2023.quantum.opt"
