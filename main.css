@@ -40,7 +40,7 @@ body {
 }
 
 #main {
-  max-width: 44em;
+  max-width: 60em;
   margin: 0px auto;
   position: relative;
   min-height: 100vh;
@@ -85,9 +85,18 @@ p {
 
 #intro-text {
   width: 30em;
+  flex-grow: 1;
+  min-width: 0;
   float: left;
   /* Lets .mission scale its font to the width of this column. */
   container-type: inline-size;
+}
+
+#intro-text h1 {
+  font-size: min(2.4em, 6cqw);
+  line-height: 1.25;
+  margin-bottom: 0.75em;
+  white-space: nowrap;
 }
 
 /* The mission statement must always render as exactly 3 lines, one per
@@ -105,11 +114,10 @@ p {
 }
 
 #intro-image {
-  /* Top margin clears the h1 (2.4em font x 2.4 line-height) so the
-     photo aligns with the first paragraph. */
-  margin: 5.95em 0 0 2em;
-  width: 12em;
-  height: 12em;
+  margin: 0 0 0 2em;
+  width: 18em;
+  max-width: 100%;
+  align-self: flex-start;
   float: left;
   overflow: hidden;
   border-radius: 0.3em;
@@ -117,7 +125,9 @@ p {
 }
 
 #intro-image img {
-  width: 12em;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /**************************************************/
@@ -186,10 +196,10 @@ h3 {
 /**************************************************/
 /* Mobile layout. The breakpoint is where the side-by-side intro would
    squeeze the text column below the 30em it needs to keep the mission
-   statement's 3 lines intact: 30em text + 2em gap + 12em image + 2.5em
-   page padding = 46.5em ~= 745px. */
+   statement's 3 lines intact: 30em text + 2em gap + 18em image + 2.5em
+   page padding = 52.5em = 840px. */
 
-@media (max-width: 760px) {
+@media (max-width: 840px) {
   #intro {
     padding-top: 3em;
     flex-direction: column-reverse;
