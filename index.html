@@ -6,9 +6,10 @@
     <title>Chandradithya Jonnalagadda</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3C/svg%3E">
 
     <!-- Custom Style -->
-    <link rel="stylesheet" href="main.css?v=5">
+    <link rel="stylesheet" href="main.css?v=13">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +22,12 @@
     <div id="main">
       <div id="intro">
         <div id="intro-text">
-          <h1>Chandradithya Jonnalagadda</h1>
+          <div class="intro-name">
+            <h1>Chandradithya Jonnalagadda</h1>
+            <p class="name-pronunciation">Chandra (pronunciation: chun-dra)</p>
+          </div>
           <p>
-            I'm a Masters student in Computer Science at Brown University working with <a href="https://cs.brown.edu/people/gdk/">George Konidaris</a> and <a href="https://chensun.me/index.html">Chen Sun</a>. My research goal is to building intelligent robots that can perform a wide range of complex tasks, adapt to unfamiliar tasks and environments, and operate safely. To this end, I am interested in <b>Offline RL</b>, <b>Offline-to-Online RL</b> and <b>Safe RL</b>.
+            I'm a Masters student in Computer Science at Brown University working with <a href="https://cs.brown.edu/people/gdk/">George Konidaris</a> and <a href="https://chensun.me/index.html">Chen Sun</a>. My research goal is to build intelligent robots that can reliably perform a wide range of complex tasks and safely adapt to unfamiliar tasks and environments. To this end, I am interested in <b>Offline RL</b>, <b>Offline-to-Online RL</b> and <b>Safe RL</b>.
           </p>  
           <p> Previously, I graduated with a Bachelors in Computer Science and Engineering from IIT Tirupati, where I worked with <a href="https://iittp.ac.in/dr-ajin-george-joseph">Ajin George Joseph</a> on <b>Risk-Sensitive RL</b>. During this time, I was fortunate to spend a year as a Student Researcher at <a href="https://rbcdsai.iitm.ac.in">Robert Bosch Center for Data Science and AI</a> working with <a href="https://wsai.iitm.ac.in/~ravi/">Balaraman Ravindran</a> on <b>Explainable AI for Graphs to ground LLM reasoning</b>.
           </p>
@@ -46,42 +50,94 @@
       </div>
 
       <div class="section">
-        <h2>Recent work:</h2>
-        <div class="publication">
-          <h3><a href="https://generalistai.com/blog/gen-1.5">GEN-1.5: Embodied Foundation Models are One-Shot Learners</a><span class="pub-meta"><i>Aug 2026</i></span></h3>
-          <p>We're starting to see in-context learning and few-gradient-step adaptation emerge from robot pretraining. GEN-1.5 can learn a new task in seconds from a single example placed in context, with zero training. It can also be fine-tuned for a new task in 1–10 gradient steps on just 1–5 minutes of data. Improvisational intelligence, which we first observed in GEN-1, now appears more frequently.</p>
-        </div>
-        <div class="publication">
-          <h3><a href="https://generalistai.com/blog/gen-1">GEN-1: Scaling Embodied Foundation Models to Mastery</a><span class="pub-meta"><i>Apr 2026</i></span></h3>
-          <p>By further scaling our models, accelerated by algorithmic advances, we're starting to see mastery of simple tasks at 99% success rates. We think much of this comes from improvisational intelligence: emergent behaviors from pretraining that enable the robot to recover from unexpected situations.</p>
-        </div>
-        <div class="publication">
-          <h3><a href="https://generalistai.com/blog/gen-0">GEN-0: Embodied Foundation Models That Scale with Physical Interaction</a><span class="pub-meta"><i>Nov 2025</i></span></h3>
-          <p>We pretrained robot models from scratch on orders of magnitude more physical interaction data than ever before, and found that more pretraining makes adaptation to new tasks faster, cheaper, more data efficient, and more general. While this may have been the first time the world saw scaling laws for robotics, we had already seen the same exponents appear three times internally, each time giving us increasing confidence that this was going to work.</p>
-        </div>
+        <h2>News</h2>
+        <!-- Placeholder entries: replace with real announcements, newest first.
+             For real dates, use <time class="news-date" datetime="2026-10">Oct 2026</time>. -->
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">August 2026</span>
+            <div class="news-content">
+              <span class="news-tag news-paper">Paper <span aria-hidden="true">🏆</span></span>
+              <p>Our work on Hierarchical RL with Temporally-extended Latent Action World Models recieved the <b>Best Paper Award</b> at the <a href="https://worldmodels-rlc.github.io">RLC 2026 Model-Based RL in the Era of Generative World Models Workshop</a>!</p>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">May 2026</span>
+            <div class="news-content">
+              <span class="news-tag news-paper">Paper</span>
+              <p>Our work titled <i>"Latent Actions from Factorized Transition Effects under Agent Ambiguity"</i> was accepted to the <a href="https://compositional-learning.github.io">ICML 2026 Compositional Learning Workshop</a>!</p>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">March 2026</span>
+            <div class="news-content">
+              <span class="news-tag news-paper">Paper</span>
+              <p>Our work titled <i>"The Price of Paranoia: Robust Risk-Sensitive Cooperation in Non-Stationary Multi-Agent Reinforcement Learning"</i> was accepted to the <a href="https://alaworkshop2026.github.io/">AAMAS 2026 Adaptive Learning Agents Workshop</a>!</p>
+            </div>
+          </li>
+          <!-- <li class="news-item">
+            <span class="news-date">Mon YYYY</span>
+            <div class="news-content">
+              <span class="news-tag news-talk">Talk</span>
+              <p>Presented <b>[Talk title]</b> at [Event / Institution].</p>
+            </div>
+          </li> -->
+          <li class="news-item">
+            <span class="news-date">August 2025</span>
+            <div class="news-content">
+              <span class="news-tag news-update">Update</span>
+              <p>Started an ScM in Computer Science at Brown University!</p>
+            </div>
+          </li>
+          <li class="news-item">
+            <span class="news-date">May 2025</span>
+            <div class="news-content">
+              <span class="news-tag news-update">Update</span>
+              <p>Graduated from IIT Tirupati with a BTech in Computer Science and Engineering!</p>
+              <p><b>Thesis:</b> <i>Beyond Expectation: Tail-Sensitive RL through Exponential Utility.</i></p>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="section">
-        <h2>Some past publications:</h2>
-        <p class="note">
-          For a more up-to-date list, visit my <a href="https://scholar.google.com/citations?user=q7nFtUcAAAAJ&hl=en">Google Scholar</a>.
-        </p>
-        <div class="publication">
-          <h3><a href="https://implicitbc.github.io/">Implicit Behavioral Cloning</a><span class="pub-meta"><i>Florence et al., CoRL 2021</i></span></h3>
-          <p>We realized that sensorimotor action distributions can be highly complex, discontinuous, and multimodal, and that the standard policy-learning machinery at the time (regression) struggled to capture them. Implicit BC instead represents actions with an energy-based model, and serves as an early stepping stone towards the generative action models widely used in robot learning today.</p>
-        </div>
-        <div class="publication">
-          <h3><a href="https://palm-e.github.io/">PaLM-E: An Embodied Multimodal Language Model</a><span class="pub-meta"><i>Driess et al., ICML 2023</i></span></h3>
-          <p>We trained what eventually became Google's largest embodied multimodal model. It transfers to robot models the visual-semantic knowledge from foundation models pretrained on Internet data.</p>
-        </div>
-        <div class="publication">
-          <h3><a href="https://code-as-policies.github.io/">Code as Policies: Language Model Programs for Embodied Control</a><span class="pub-meta"><i>Liang et al., ICRA 2023</i></span></h3>
-          <p>Turns out language models can be used to generate robot code, forming policies by expressing functions or feedback loops that process perception outputs and parameterize control primitives.</p>
-        </div>
-        <div class="publication">
-          <h3><a href="https://graspinwild.cs.columbia.edu/">Grasping in the Wild: Learning 6DoF Closed-Loop Grasping from Low-Cost Demonstrations</a><span class="pub-meta"><i>Song et al., RA-L 2020</i></span></h3>
-          <p>We noticed people picking up beach trash with grabber-reacher tools and wondered: with a camera and some 3D vision, could these become robot data-collection devices? So we built a low-cost handheld gripper for collecting grasping demonstrations in everyday environments, an early precursor to wearable/handheld data-collection interfaces like UMI (Chi et al., RSS 2024).</p>
-        </div>
+        <h2>Research</h2>
+        <article class="publication">
+          <div class="publication-media">
+            <img class="publication-teaser" src="images/telawm.png" alt="teaser image" loading="lazy">
+          </div>
+          <div class="publication-details">
+            <h3>Hierarchical RL with Temporally-extended Latent Action World Models</h3>
+            <p class="publication-authors">Dan Haramati, <b>Chandradithya S Jonnalagadda</b>, Akhil Bagaria, George Konidaris</p>
+            <p class="publication-venue">RLC 2026 · Model-Based RL in the Era of Generative World Models Workshop · Best Paper Award 🏆</p>
+            <p class="publication-links"><a href="https://openreview.net/pdf?id=2SwshSxGPH" rel="noopener">paper</a></p>
+            <p class="publication-summary">We introduce an offline goal-conditioned framework that learns a high-level world model used to plan subgoals for a value-based model-free RL policy. We propose Temporally-extended Latent Action World Models (Te-LAWMs) as high-level world models, trained via a latent action modeling objective.</p>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-media">
+            <img class="publication-teaser" src="images/otf-lam.png" alt="teaser image" loading="lazy">
+          </div>
+          <div class="publication-details">
+            <h3>Latent Actions from Factorized Transition Effects under Agent Ambiguity</h3>
+            <p class="publication-authors">Heejeong Nam, <b>Chandradithya S Jonnalagadda</b>, Harshit Aggarwal, Eric Xu, Randall Balestriero</p>
+            <p class="publication-venue">ICML 2026 · Compositional Learning Workshop</p>
+            <p class="publication-links"><a href="https://arxiv.org/pdf/2606.30544" rel="noopener">paper</a>  / <a href="https://hazel-heejeong-nam.github.io/LAM/" rel="noopener">project page</a> / <a href="https://github.com/Hazel-Heejeong-Nam/lam_agent_ambiguity" rel="noopener">code</a></p>
+            <p class="publication-summary">We propose Observed Transtion Factorization LAM (OTF-LAM), a latent action mdoel that learns environment-agnostic motion primitives from visual changes and composes them into state-aware latent actions that capture coordinated and independent movements. These latent actions are mapped to real actions using a small amount of action-labeled data.</p>
+          </div>
+        </article>
+        <article class="publication">
+          <div class="publication-media">
+            <img class="publication-teaser" src="images/pop.png" alt="teaser image" loading="lazy">
+          </div>
+          <div class="publication-details">
+            <h3>The Price of Paranoia: Robust Risk-Sensitive Cooperation in Non-Stationary Multi-Agent Reinforcement Learning</h3>
+            <p class="publication-authors">Deep Ganguly, <b>Chandradithya S Jonnalagadda</b>, Pratham Chintamani, Adithya Ananth</p>
+            <p class="publication-venue">AAMAS 2026 · Adaptive Learning Agents Workshop</p>
+            <p class="publication-links"><a href="https://arxiv.org/pdf/2604.15695">paper</a></p>
+            <p class="publication-summary">We propose a MARL algorithm that sustains cooperation between agents in mixed-motive games and social dilemmas by improving robustness to the policy gradient update variance induced by the other agents' uncertainties.</p>
+          </div>
+        </article>
       </div>
 
     </div>
