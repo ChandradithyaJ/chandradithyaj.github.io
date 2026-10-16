@@ -9,7 +9,17 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3C/svg%3E">
 
     <!-- Custom Style -->
-    <link rel="stylesheet" href="main.css?v=13">
+    <script>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem('theme'); } catch (_) {}
+        if (theme !== 'light' && theme !== 'dark') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="main.css?v=23">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +42,7 @@
           <p> Previously, I graduated with a Bachelors in Computer Science and Engineering from IIT Tirupati, where I worked with <a href="https://iittp.ac.in/dr-ajin-george-joseph">Ajin George Joseph</a> on <b>Risk-Sensitive RL</b>. During this time, I was fortunate to spend a year as a Student Researcher at <a href="https://rbcdsai.iitm.ac.in">Robert Bosch Center for Data Science and AI</a> working with <a href="https://wsai.iitm.ac.in/~ravi/">Balaraman Ravindran</a> on <b>Explainable AI for Graphs to ground LLM reasoning</b>.
           </p>
           <p class="mission">
-            I'm actively looking for and applying to PhD positions starting Fall 2027!
+            I'm actively looking for and applying to <b>PhD positions starting Fall 2027!</b>
           </p>
           <p>
             Outside of research, I enjoy playing sports (mainly cricket and fútbol, although I'd never say no to any sport!), trekking, cooking and editing videos!
@@ -45,7 +55,13 @@
           </p>
         </div>
         <div id="intro-image">
-          <img src="images/profile.jpg?v=2">
+          <img src="images/profile.jpg?v=3">
+          <div class="theme-controls">
+            <button class="theme-toggle" type="button" role="switch" aria-label="Dark mode" aria-checked="false" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -58,7 +74,7 @@
             <span class="news-date">August 2026</span>
             <div class="news-content">
               <span class="news-tag news-paper">Paper <span aria-hidden="true">🏆</span></span>
-              <p>Our work on Hierarchical RL with Temporally-extended Latent Action World Models recieved the <b>Best Paper Award</b> at the <a href="https://worldmodels-rlc.github.io">RLC 2026 Model-Based RL in the Era of Generative World Models Workshop</a>!</p>
+              <p>Presented our work on Hierarchical RL with Temporally-extended Latent Action World Models and recieved the <b>Best Paper Award</b> at the <a href="https://worldmodels-rlc.github.io">RLC 2026 Model-Based RL in the Era of Generative World Models Workshop</a> in Montreal!</p>
             </div>
           </li>
           <li class="news-item">
@@ -104,7 +120,7 @@
         <h2>Research</h2>
         <article class="publication">
           <div class="publication-media">
-            <img class="publication-teaser" src="images/telawm.png" alt="teaser image" loading="lazy">
+            <img class="publication-teaser" src="images/telawm.png?v=2" alt="teaser image" loading="lazy">
           </div>
           <div class="publication-details">
             <h3>Hierarchical RL with Temporally-extended Latent Action World Models</h3>
@@ -116,7 +132,7 @@
         </article>
         <article class="publication">
           <div class="publication-media">
-            <img class="publication-teaser" src="images/otf-lam.png" alt="teaser image" loading="lazy">
+            <img class="publication-teaser" src="images/otf-lam.png?v=2" alt="teaser image" loading="lazy">
           </div>
           <div class="publication-details">
             <h3>Latent Actions from Factorized Transition Effects under Agent Ambiguity</h3>
@@ -128,7 +144,7 @@
         </article>
         <article class="publication">
           <div class="publication-media">
-            <img class="publication-teaser" src="images/pop.png" alt="teaser image" loading="lazy">
+            <img class="publication-teaser" src="images/pop.png?v=2" alt="teaser image" loading="lazy">
           </div>
           <div class="publication-details">
             <h3>The Price of Paranoia: Robust Risk-Sensitive Cooperation in Non-Stationary Multi-Agent Reinforcement Learning</h3>
@@ -140,7 +156,24 @@
         </article>
       </div>
 
+      <footer class="site-footer">
+        <p>Adapted from <a href="https://andyzeng.github.io/" rel="noopener">Andy Zeng's website</a>. My modifications can be found <a href="https://github.com/ChandradithyaJ/chandradithyaj.github.io" rel="noopener">here</a>.</p>
+      </footer>
     </div>
 
+    <script>
+      (() => {
+        const root = document.documentElement;
+        const toggle = document.querySelector('.theme-toggle');
+        const sync = () => toggle.setAttribute('aria-checked', String(root.dataset.theme === 'dark'));
+        sync();
+        toggle.hidden = false;
+        toggle.addEventListener('click', () => {
+          root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          sync();
+          try { localStorage.setItem('theme', root.dataset.theme); } catch (_) {}
+        });
+      })();
+    </script>
   </body>
 </html>
